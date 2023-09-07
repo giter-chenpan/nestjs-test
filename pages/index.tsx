@@ -13,7 +13,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData }: any) {
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
@@ -126,7 +126,7 @@ export default function Home({ allPostsData }) {
       <Link href="/posts/first-post">to first-post</Link>
       <Image src="/next.svg" alt="" width="300" height="300" />
       <section>
-        {allPostsData.map(({ id, date, title }) => (
+        {allPostsData.map(({ id, date, title }: any) => (
           <li key={id}>
             <Link href={"/posts/" + id}>{title}</Link>
             <br />
